@@ -6,3 +6,5 @@ ccccccccc
 
 nexy
 mext
+
+zmieniono lokalnie
