@@ -1,0 +1,649 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="pl" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Rezerwacja Online</title>
+<link rel="stylesheet" href="../wp-content/style.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+<style>
+input[type=submit] {
+  background-color: #0611B9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 50px auto;
+  display: block;
+  line-height: 30px;
+  width: 160px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ position: static; 
+}
+
+form {
+position: absolute;
+background: rgb(11,122,237);
+background: linear-gradient(90deg, rgba(11,122,237,1) 11%, rgba(68,163,250,1) 47%, rgba(18,100,175,1) 100%);
+opacity: 0.8;
+padding: 100px;
+border: 2px solid #58a0e2;
+border-radius: 50px;
+width: 100%;
+}
+
+.menu2 li {
+	list-style: none;
+}
+ul > li {
+	float: left;
+}
+#podli {
+	float: none;
+	display: block;
+}
+.divek {
+	margin-top: 50px;
+	text-align: center;
+	background-color: #43a5fa;
+}
+ul > li {
+	padding-right: 30px;
+	padding-left: 30pxl
+}
+.menu {
+	text-align: center;
+}
+.menu2{
+	display: inline-block;
+	list-style: none;
+}
+.menu2 li a {
+	color: #777777;
+	font-weight: bold;
+}
+
+ul li ul {display: none;}
+ul li:hover ul {
+	display: block;
+	position: absolute;
+	background: white;
+	margin-left: -50px;
+}
+
+#podli:hover {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #00aff2;
+}
+
+#podli > a:hover {
+	color: #00aff2;
+}
+
+.formatka {
+	padding-top: 50px;
+}
+
+.divek>h2 {
+	font-size: 48px;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue !important;
+	padding-top: 50px;
+	background-color: #43a5fa;
+	margin-top: 50px;
+}
+#rezer {
+	color: #00aff2;
+	border-top: 3px solid #00aff2;
+	padding-top: 20px;
+}
+
+@media screen and (max-width: 800px){
+	
+	.menu2 {
+		display: grid;
+		text-align: center;
+	}
+	
+	.menu2 > li {
+		margin: auto;
+        display: table-cell;
+		padding: 20px;
+		vertical-align: middle;
+	}
+
+	.baczek {
+	visibility: visible;
+	}
+
+
+	h2 {
+	width: 50%;
+	float: none;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+  .pierwszy, divek {
+	
+	float: left;
+	padding: 0;
+	width: 80%;
+	margin: 0 0 0 -100px;
+  }
+  
+	.poddivek {
+	visibility: hidden;
+	}
+	
+	.image {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	}
+	
+	form {
+	width: 100%;
+	padding: 0;
+	}
+	
+	input {
+	width: 200px;
+	}
+	
+	textarea {
+	height: 400px;
+	}
+	
+	.lfname {
+	width: 40%;
+	float: left;
+	}
+	
+	#fname {
+	width: 60%;
+	float: left;
+	}
+	
+	.lfname, #fname {
+	width: 100%;
+	}
+	
+	fieldset {
+border: none;
+padding-top: 50px;
+}
+
+	input[type=submit] {
+	background-color: #0611B9;
+  color: white;
+	}
+	
+	.ropek, select {
+	text-align: center;
+
+	}
+	.one {
+	text-align: center;
+	float: none;
+	}
+	.two {
+	text-align: center;
+	margin-left: 0;
+	}
+	
+	textarea {
+	width: 80%;
+	margin-left: 0;
+	}
+	
+	.menu a {
+display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+color: #777777;
+vertical-align: middle;
+display: inline-block;
+line-height: 20px;
+
+}
+	
+	.menu {
+min-width: 200px;
+
+
+font-size:23px;
+letter-spacing:2px;
+font-weight: bold;
+box-sizing:border-box;
+text-align: center;
+
+}
+}
+
+@media screen and (max-width: 900px)
+{
+	.poddivek {
+		visibility: hidden;
+	}
+}
+
+@media screen and (min-width: 800px) {
+
+.formatka > form {
+position: relative;
+width: 80%;
+	top: 100%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.image {
+position: relative;
+padding: 0px;
+margin: 0 50px;
+margin: 0 10%;
+}
+
+	.baczek {
+	visibility: hidden;
+	}
+
+	.one {
+		width: 40%;
+		float: left;
+		color: #fff;
+		font-weight: bold;
+		font-size: 23px;
+	}
+	
+	.two {
+	width: 60%;
+	}
+	
+	textarea {
+	width: 80%;
+	
+	}
+
+	.inputek {
+	position: relative;
+	bottom: -20px;
+	}
+	
+		fieldset {
+	border: none;
+}
+
+.one {
+float: left;
+}
+
+.two {
+position: relative;
+margin-left: 50%;
+}
+
+.ropek {
+	width: 90%;
+}
+
+	.baczek {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	font-weight:bold;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.baczek:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+.baczek:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+@media screen and (max-width: 800px){
+	.image img {
+  <!--    top: 0;
+    left: 0;
+    right: 50px;
+    bottom: 0;
+	position: relative;
+	padding: 0 16%; -->
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	}
+	.baczek {
+	visibility: visible;
+	}
+
+
+	h2 {
+	width: 50%;
+	float: none;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+  .pierwszy, divek {
+	
+	float: left;
+	padding: 0;
+	width: 80%;
+	margin: 0 0 0 -100px;
+  }
+  
+	.poddivek {
+	visibility: hidden;
+	}
+	
+
+	
+	form {
+	width: 100%;
+	padding: 0;
+	}
+	
+	input {
+	width: 200px;
+	}
+	
+	textarea {
+	height: 400px;
+	}
+	
+	.lfname {
+	width: 40%;
+	float: left;
+	}
+	
+	#fname {
+	width: 60%;
+	float: left;
+	}
+	
+	.lfname, #fname {
+	width: 100%;
+	}
+	
+	fieldset {
+border: none;
+padding-top: 50px;
+}
+
+	input[type=submit] {
+	background-color: #0611B9;
+  color: white;
+	}
+	
+	.ropek, select {
+	text-align: center;
+
+	}
+	.one {
+	text-align: center;
+	float: none;
+	}
+	.two {
+	text-align: center;
+	margin-left: 0;
+	}
+	
+	textarea {
+	width: 80%;
+	margin-left: 0;
+	}
+	
+	.menu a {
+display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+color: #777777;
+vertical-align: middle;
+display: inline-block;
+line-height: 20px;
+
+}
+	
+	.menu {
+min-width: 200px;
+
+
+font-size:23px;
+letter-spacing:2px;
+font-weight: bold;
+box-sizing:border-box;
+text-align: center;
+
+}
+}
+
+<!-- @media screen and (max-width: 900px)
+{
+	.poddivek {
+		visibility: hidden;
+	}
+	.image {
+    top: 0;
+    left: 0;
+    right: 50px;
+    bottom: 0;
+	position: relative;
+	padding: 0 16%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	}
+} -->
+
+input[type=submit] {
+  background-color: #0611B9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 50px auto;
+  display: block;
+  line-height: 30px;
+  width: 160px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ position: static; 
+}
+
+form {
+position: relative;
+background: rgb(11,122,237);
+background: linear-gradient(90deg, rgba(11,122,237,1) 11%, rgba(68,163,250,1) 47%, rgba(18,100,175,1) 100%);
+opacity: 0.8;
+padding: 100px;
+border: 2px solid #58a0e2;
+border-radius: 50px;
+width: 100%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+	<?php echo get_option('home'); ?>
+	<?php bloginfo('name'); ?>
+	<?php bloginfo('description'); ?>
+	
+</header>
+<!--<a href="http://piast-24.pl/" class="baczek">Strona Główna</a>-->
+<img src="./logopiast.png" class="image"></img>
+  
+<!--  <a href="http://piast-24.pl/"  class="poddivek">Powrót do strony głównej</a>-->
+             
+<div class="menu" style="width:100%;">
+<ul class="menu2">
+	<li><a href="/wordpress/index.php">STRONA GŁÓWNA</a></li>
+	<li><a href="#">O NAS</a>
+		<ul>
+			<li id="podli"><a href="/wordpress/nasze-miasto/">NASZE MIASTO</a></li>
+			<li id="podli"><a href="/wordpress/oferty-specjalne/">OFERTY SPECJALNE</a></li>
+			<li id="podli"><a href="/wordpress/sanatorium/">SANATORIUM</a></li>
+			<li id="podli"><a href="/wordpress/polityka-jakosci/">POLITYKA JAKOŚCI</a></li>
+			<li id="podli"><a href="/wordpress/certyfikaty/">CERTYFIKATY</a></li>
+			<li id="podli"><a href="/wordpress/rodo/">RODO</a><li>
+		</ul>
+	</li>
+	<li><a href="/wordpress/galeria/">GALERIA</a></li>
+	<li><a href="/wordpress/warunki-rezerwacji/">WARUNKI REZERWACJI</a></li>
+	<li><a id="rezer" href="/wordpress/rezerwacja2/index3.html">REZERWACJA ONLINE</a></li>
+	<li><a href="/wordpress/kontakt-znami/">KONTAKT Z NAMI</a></li>
+</ul>
+</div>
+  
+ <div class="divek">
+  
+  
+
+  <h2>Rezerwacja Online</h2><br><br><br>
+
+
+</div>
+<div class="formatka">
+  <form action="email.php">
+
+<!--sd<table>
+<tr class="pierwszy">
+<td>
+    <label for="fname"><span class="lfname">Imię:</span></label>
+</td>
+<td>
+    <input type="text" id="fname" name="firstname" required placeholder="Wpisz imię.."><br>
+</td>
+</tr>-->
+<fieldset>
+<div class="one">
+	<label for="fname">Imię:</label>
+</div>
+<div class="two">
+    <input type="text" name="firstname" required placeholder="Wpisz imię..">
+</div>
+<br>
+<div class="one">
+    <label for="lname">Nazwisko:</label> 
+</div>
+<div class="two">
+    <input type="text" id="lname" name="lastname" required placeholder="Wpisz nazwisko.."><br>
+</div>
+<br>
+
+<div class="one">
+	<label for="email">e-mail:</label>
+</div>
+<div class="two">
+	<input type="email" id="email" name="email" required placeholder="example@gmail.com"><br>
+</div>
+<br>
+
+<div class="one">
+	<label for="nrtel">Numer telefonu:</label>
+</div>
+<div class="two">
+<input type="tel" id="nrtel" name="nrtel" required placeholder="Nr telefonu"><br>
+</div>
+<br>
+
+<div class="one">
+	<label for="ile">Ilość osób:</label>
+</div>
+<div class="two">
+	<input type="number" min="1" max="5" id="ile" name="ile" required><br>
+</div>
+<br>
+
+<div class="one">
+	<label for="rp">Rodzaj pokoju:</label>
+</div>
+<div class="two">
+	<select id="rp" name="rp" required>
+		<option value="1-osobowy">1 Osobowy</option>
+		<option value="2-osobowy">2 Osobowy</option>
+		<option value="3-osobowy">3 Osobowy</option>
+	</select>
+</div>
+<br>
+
+<div class="one">
+	<label for="ropo">Rodzaj pobytu:</label>
+</div>
+<div class="two">
+	<select id="ropo" class="ropek" name="ropo" required>
+		<option value="Pełnopłatny">z leczeniem pełnopłatnym</option>
+		<option value="Rehabilitacyjny">rehabilitacyjny z dofinansowaniem</option>
+		<option value="Inny">noclegi</option>
+	</select>
+</div>
+<br>
+<div class="one">
+	<label for="od">Pobyt od:</input>
+</div>
+<div class="two">
+	<input type="date" name="od" min="2000-01-01" required>
+</div>
+<br>
+<div class="one">
+	<label for="do">Pobyt do:</input>
+</div>
+<div class="two">
+	<input type="date" name="do" max="2040-12-12" required>
+</div>
+<br><br><br><br />
+<div class="one">
+    <label for="tresc">Treść zapytania:</label><br>
+</div>
+
+<div class="two">
+    <textarea id="tresc" name="tresc" placeholder="Napisz do nas..."></textarea>
+</div>	
+	
+	<div class="inputek">
+		<input type="submit" value="Wyślij">
+	</div>
+	
+	</fieldset>
+</form>
+	</div>
+	
+	<footer>
+
+	</footer>
+
+</body>
+</html>
